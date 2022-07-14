@@ -16,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_Launch).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent calcIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("calculator://launch"));
+
                 startActivity(Intent.createChooser(calcIntent, null));
             }
         });
